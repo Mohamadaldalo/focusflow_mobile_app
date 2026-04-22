@@ -1,2 +1,3 @@
 kivy>=2.2.0
 pyttsx3
+request
