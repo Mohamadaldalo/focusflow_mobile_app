@@ -19,7 +19,32 @@ jobs:
             python3-pip \
             zip \
             unzip \
+            wget \
             openjdk-17-jdk
+
+      - name: Install Android SDK and Build Tools
+        env:
+          ANDROID_SDK_ROOT: /home/runner/.android/android-sdk
+        run: |
+          mkdir -p /home/runner/.android
+          cd /home/runner/.android
+
+          wget -q https://dl.google.com/android/repository/commandlinetools-linux-9123335_latest.zip
+          unzip -q commandlinetools-linux-9123335_latest.zip
+
+          mkdir -p $ANDROID_SDK_ROOT
+          mv cmdline-tools $ANDROID_SDK_ROOT/
+
+          cd $ANDROID_SDK_ROOT/cmdline-tools
+          mkdir -p latest
+          mv * latest 2>/dev/null || true
+
+          yes | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager --licenses
+
+          $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager \
+            "platform-tools" \
+            "build-tools;35.0.0" \
+            "platforms;android-34"
 
       - name: Install Python dependencies
         run: |
@@ -27,6 +52,9 @@ jobs:
           pip install buildozer cython
 
       - name: Build APK
+        env:
+          ANDROID_SDK_ROOT: /home/runner/.android/android-sdk
+          ANDROID_HOME: /home/runner/.android/android-sdk
         run: |
           cd focusflow
           buildozer android debug
