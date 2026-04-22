@@ -1,0 +1,42 @@
+[
+  {
+    "duration": 600,
+    "success": false,
+    "timestamp": "2026-04-21T11:48:21.327036"
+  },
+  {
+    "duration": 480,
+    "success": true,
+    "timestamp": "2026-04-21T11:57:16.481451"
+  },
+  {
+    "duration": 60,
+    "success": false,
+    "timestamp": "2026-04-21T11:58:16.133645"
+  },
+  {
+    "duration": 540,
+    "success": false,
+    "timestamp": "2026-04-21T12:04:01.376255"
+  },
+  {
+    "duration": 60,
+    "success": true,
+    "timestamp": "2026-04-21T12:18:11.067884"
+  },
+  {
+    "duration": 60,
+    "success": false,
+    "timestamp": "2026-04-21T12:26:37.276127"
+  },
+  {
+    "duration": 120,
+    "success": false,
+    "timestamp": "2026-04-21T12:31:18.025330"
+  },
+  {
+    "duration": 120,
+    "success": false,
+    "timestamp": "2026-04-21T16:03:03.947750"
+  }
+]
