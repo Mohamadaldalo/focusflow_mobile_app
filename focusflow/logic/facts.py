@@ -1,9 +1,3 @@
-"""
-logic/facts.py
---------------
-Categorized "Did You Know?" facts, English only.
-Filtered by the user's chosen interest topic.
-"""
 
 import random
 from data.settings import get as get_setting
