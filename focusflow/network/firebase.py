@@ -1,43 +1,4 @@
-"""
-network/firebase.py
--------------------
-All Firebase Realtime Database calls for the Study Room feature.
 
-WHY FIREBASE?
-- Free tier (Spark plan) supports unlimited reads/writes for small apps
-- No server needed — REST API works directly from Python
-- Simple JSON data, no complex queries needed
-
-SETUP (one-time, 2 minutes):
-1. Go to https://console.firebase.google.com
-2. Create a project (free)
-3. Go to Build > Realtime Database > Create Database
-4. Choose "Start in test mode" (allows read/write without login)
-5. Copy your database URL — looks like:
-      https://YOUR-PROJECT-default-rtdb.firebaseio.com
-6. Paste it as FIREBASE_URL below
-
-DATABASE SCHEMA:
-/rooms
-  /{room_code}
-    /name        : "Study Room 1"
-    /created_at  : 1700000000
-    /timer
-      /start_ts  : 1700000000   <- Unix timestamp when timer started
-      /duration  : 1500         <- 25 min in seconds
-      /phase     : "focus"      <- "focus" or "break"
-      /running   : true
-    /users
-      /{user_id}
-        /name      : "Alice"
-        /joined_at : 1700000000
-        /last_ping : 1700000000  <- updated every 10s to detect presence
-    /messages
-      /{msg_id}
-        /user    : "Alice"
-        /text    : "Hello!"
-        /ts      : 1700000000
-"""
 
 import time
 import uuid
