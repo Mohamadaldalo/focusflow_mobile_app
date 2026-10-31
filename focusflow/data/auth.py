@@ -1,27 +1,4 @@
-"""
-data/auth.py
-------------
-Google OAuth2 authentication using the Device Authorization Flow.
 
-WHY DEVICE FLOW (not redirect):
-  - Works on desktop and mobile without a browser redirect URI
-  - User visits a short URL on any device and enters a code
-  - No local HTTP server or deep-link handling required
-  - Standard OAuth2 RFC 8628
-
-SETUP (one-time, free):
-  1. Go to https://console.cloud.google.com
-  2. Create a project → APIs & Services → Credentials
-  3. Create an OAuth 2.0 Client ID → choose "TVs and Limited Input devices"
-  4. Copy the Client ID and Client Secret into this file (or credentials.json)
-
-SCOPES used:
-  - openid         → identity
-  - email          → user's email address
-  - profile        → display name + avatar URL
-
-All tokens are stored locally in data/auth_token.json.
-"""
 
 import json
 import os
