@@ -1,9 +1,4 @@
-"""
-ui/language_screen.py
----------------------
-First-launch screen: lets the user choose English or Arabic.
-Shown only once; preference is saved to settings.json.
-"""
+
 
 from kivy.uix.screenmanager import Screen
 from kivy.uix.boxlayout import BoxLayout
