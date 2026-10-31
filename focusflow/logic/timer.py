@@ -1,18 +1,3 @@
-"""
-logic/timer.py
---------------
-Countdown timer.
-
-BUG FIX — App crash on timer completion:
-  _on_complete was called directly inside _tick(), which runs on Kivy's
-  internal Clock thread. Any UI operation (changing screens, updating labels)
-  from a non-main thread crashes Kivy on Windows.
-
-FIX:
-  Wrap every callback in Clock.schedule_once(..., 0) so Kivy defers
-  execution to the next frame on the MAIN thread. This is safe for all
-  callbacks: on_tick, on_fact_rotate, on_complete.
-"""
 
 from kivy.clock import Clock
 
