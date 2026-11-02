@@ -1,11 +1,11 @@
-# FocusFlow 🎯
+# FocusFlow 
 ### Adaptive Focus & Attention Training App
 
 A clean, minimal Kivy mobile app that helps you build your attention span through timed focus sessions, rotating facts, and adaptive difficulty.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 focusflow/
@@ -30,7 +30,7 @@ focusflow/
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### 1. Install Python 3.9+ and pip
 
@@ -54,7 +54,7 @@ A 390×844 window (iPhone-sized) will open for desktop testing.
 
 ---
 
-## 📱 Build to APK (Android)
+## Build to APK (Android)
 
 ### Prerequisites
 - Linux or macOS (WSL2 works on Windows)
@@ -82,7 +82,7 @@ Or copy the APK to your phone and install manually (enable "Unknown Sources").
 
 ---
 
-## 🎮 How to Use
+## How to Use
 
 1. **Home Screen** — App suggests a session duration based on your history. Adjust with the slider if you like.
 2. **Session Screen** — Hit **Start Session**. A countdown ring appears along with rotating focus facts every 60–120 seconds.
@@ -91,7 +91,7 @@ Or copy the APK to your phone and install manually (enable "Unknown Sources").
 
 ---
 
-## 🧠 Adaptive Logic
+## Adaptive Logic
 
 | Situation | Suggestion |
 |-----------|-----------|
@@ -104,7 +104,7 @@ Session history is stored in `data/sessions.json`.
 
 ---
 
-## 🔧 Customization
+## Customization
 
 | What | Where | How |
 |------|-------|-----|
@@ -115,7 +115,7 @@ Session history is stored in `data/sessions.json`.
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 - **Kivy 2.2+** — cross-platform UI framework
 - **Python stdlib only** — `json`, `os`, `random`, `datetime`, `math`
@@ -124,7 +124,7 @@ No external APIs, no internet required.
 
 ---
 
-## 🛠 Future Improvements
+## Future Improvements
 
 - [ ] Sound/vibration on completion
 - [ ] Session streaks and badges
